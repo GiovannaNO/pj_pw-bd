@@ -1,0 +1,29 @@
+SHOW TABLES;
+INSERT INTO usuario (nome, email, senha) VALUES ('Giovanna Nunes', 'giovanna10nunes@gmail.com', '0202');
+#CONSULTANDO USUÁRIOS
+SELECT * FROM usuario;
+#UPDATE para alterar os dados do usuário
+UPDATE usuario SET nome='Hector Saldivar', email='hectorvieirasaldivar@gmail.com' WHERE cd = 24;
+UPDATE usuario SET nome='Giovanna Nunes' WHERE cd = 35;
+#CADASTRO DE CATEGORIA
+INSERT INTO categoria (nome) VALUES ('Sistemas Embarcados');
+#CONSULTA de categorias
+SELECT * FROM categoria;
+#UPDATE para alterar os dados da galera q botou repetido/errado
+UPDATE categoria SET nome='Desenvolvimento de Sistemas' WHERE cd = 3;
+UPDATE categoria SET nome='Sistemas Embarcados' WHERE cd = 4;
+UPDATE categoria SET nome='Programação de Aplicativos Mobile' WHERE cd = 5;
+UPDATE categoria SET nome='Programação WEB II' WHERE cd = 6;
+UPDATE categoria SET nome='Banco de Dados II' WHERE cd = 7;
+#CRIANDO JOGO
+INSERT INTO jogo (nome, id_usuario, id_categoria) VALUES ('NioGuns', '35', '2');
+SELECT * FROM jogo;
+UPDATE jogo SET nome='Game' WHERE cd = 22;
+#CADASTRAR PERGUNTA
+INSERT INTO pergunta (nome, id_jogo) VALUES ('HTML é uma linguagem de:',8);
+#CADASTRAR ALTERNATIVAS
+INSERT INTO alternativa(texto,resposta,id_pergunta) VALUES('Marcação', true, 26),('Programação', false, 26),('Estilização', false, 26),('Java', false, 26);
+#CONSULTAR TODAS AS PERGUNTAS
+SELECT * FROM pergunta;
+#CONSULTAR PERGUTAS EM UM JOGO ESPECÍFICO
+SELECT * FROM pergunta WHERE cd=26;
